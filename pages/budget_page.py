@@ -10,7 +10,7 @@ class BudgetPage:
 
     @allure.step
     def open(self):
-        self.driver.get("https://budget.modus.app/")
+        self.driver.get("http://127.0.0.1:3000/")
         return self
 
     @allure.step
@@ -31,6 +31,10 @@ class BudgetPage:
     @allure.step
     def btn_submit(self):
         return self.driver.find_element_by_css_selector('button.submit')
+
+    @allure.step
+    def btn_cancel(self):
+        return self.driver.find_element_by_css_selector('button.cancel')
 
     @allure.step
     def btn_delete(self):
